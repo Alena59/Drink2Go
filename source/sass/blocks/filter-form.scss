@@ -1,0 +1,142 @@
+.filter-form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 24px;
+
+  &:last-of-type {
+    margin-bottom: 30px;
+  }
+}
+
+.filter-form__fields-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-form__title {
+  @include montserrat-semibold(16px, 24px);
+  margin-bottom: 31px;
+}
+
+.filter-form__fieldset--milk .filter-form__title {
+  margin-bottom: 24px;
+}
+
+.filter-form__fieldset--milk {
+  margin-bottom: 20px;
+}
+
+.filter-form__fields {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-form__fieldset--milk .filter-form__fields {
+  row-gap: 22px;
+}
+
+.filter-form__fieldset--country .filter-form__fields {
+  row-gap: 21px;
+}
+
+.filter-form__fieldset--country .filter-form__title {
+  margin-bottom: 22px;
+}
+
+.filter-form__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 114px;
+  margin-bottom: 37px;
+}
+
+.filter-form__button {
+  @include montserrat-regular(13px, 24px);
+  min-height: 45px;
+  min-width: 160px;
+  padding: 10px 14px;
+}
+
+
+.filter-form__button--apply {
+  color: $color-white;
+}
+
+.filter-form__button--reset {
+  background-color: $color-white;
+  color: $color-blue-marguerite;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-white;
+  }
+
+  &:disabled {
+    background-color: $color-mercury;
+    color: $color-white;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .filter-form__button {
+    @include montserrat-regular(14px, 24px);
+  }
+
+  .filter-form__button--reset {
+    margin-right: 40px;
+  }
+
+  .filter-form__box {
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 30px;
+    margin: 0;
+    grid-column: 1 / 4;
+  }
+
+  .filter-form__title {
+    margin-bottom: 28px;
+  }
+
+  .filter-form__fieldset--milk .filter-form__title,
+  .filter-form__fieldset--country .filter-form__title {
+    margin-bottom: 20px;
+  }
+
+  .filter-form__fieldset--milk .filter-form__fields,
+  .filter-form__fieldset--country .filter-form__fields {
+    row-gap: 20px;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .filter-form__button {
+    @include montserrat-regular(14px, 24px);
+    min-height: 40px;
+    min-width: 150px;
+    padding: 8px 11px;
+  }
+
+  .filter-form__box {
+    width: 100%;
+    margin: 0;
+    gap: 12px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .filter-form__fieldset--country .filter-form__title {
+    margin-bottom: 25px;
+  }
+
+  .filter-form__button--reset {
+    margin-right: 0;
+  }
+}

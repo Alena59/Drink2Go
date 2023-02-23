@@ -1,0 +1,103 @@
+.advantage__title {
+  @include montserrat-bold(18px, 32px);
+  text-align: center;
+}
+
+.advantage__text {
+  margin: 0;
+  text-align: center;
+}
+
+.advantage__shift-ecology {
+  display: none;
+}
+
+.advantage__item--speed::before {
+  background: url("../../img/icons/stack.svg#speed");
+}
+
+.advantage__item--convenience::before {
+  background: url("../../img/icons/stack.svg#convenience");
+}
+
+.advantage__item--cheerfulness::before {
+  background: url("../../img/icons/stack.svg#cheerfulness");
+}
+
+.advantage__item--ecology::before {
+  background: url("../../img/icons/stack.svg#ecology");
+}
+
+.advantage__item {
+  padding-top: 66px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    transform: translateX(-26px);
+    width: 52px;
+    height: 56px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantage__shift-speed {
+    display: none;
+  }
+
+  .advantage__shift-ecology {
+    display: block;
+  }
+
+  .advantage__text {
+    @include montserrat-regular(16px, 24px);
+    text-align: left;
+  }
+
+  .advantage__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .advantage__title {
+    display: flex;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: 1439px) {
+  .advantage__title {
+    @include montserrat-bold(24px, 36px);
+    text-align: left;
+  }
+
+  .advantage__item {
+    padding-top: 0;
+    padding-left: 72px;
+
+    &::before {
+      top: 0;
+      left: 0;
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .advantage__text {
+    text-align: center;
+  }
+
+  .advantage__item {
+    padding-top: 80px;
+    align-items: center;
+  }
+
+  .advantage__title {
+    @include montserrat-bold(24px, 36px);
+  }
+}

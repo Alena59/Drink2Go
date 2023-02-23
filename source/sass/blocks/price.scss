@@ -1,0 +1,137 @@
+.price {
+  margin-bottom: 25px;
+}
+
+.price__range-scale {
+  position: relative;
+  width: 280px;
+  height: 2px;
+  margin-bottom: 37px;
+  background-color: $color-mercury;
+}
+
+.price__range-bar {
+  position: absolute;
+  width: 247px;
+  height: 4px;
+  left: 0;
+  background-color: $color-portage;
+}
+
+.price__range-toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: $color-white;
+  border-radius: 50%;
+  border: 2px solid $color-portage;
+  cursor: pointer;
+
+  &--min {
+    top: -10px;
+    left: 0;
+  }
+
+  &--max {
+    top: -10px;
+    right: 19px;
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    box-shadow: 0 0 0 2px $color-white inset, 0 0 0 12px rgba($color-blue-marguerite, 0.25) inset;
+    outline: none;
+  }
+}
+
+.price__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price__input {
+  @include montserrat-medium(16px, 24px);
+  width: 117px;
+  height: 38px;
+  border: 2px solid $color-portage;
+  border-radius: 4px;
+  text-align: center;
+  padding: 5px;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    border-color: $color-royal-purple;
+    outline: none;
+  }
+
+  &:disabled {
+    border-color: $color-mercury;
+    color: $color-mercury;
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: $color-silver;
+  }
+}
+
+.price__range-toggle:active {
+  background-color: $color-blue-marguerite;
+  box-shadow: 0 0 0 2px $color-white inset;
+  outline: none;
+}
+
+.price__range-toggle:disabled {
+  border-color: $color-silver;
+  background-color: $color-alabaster;
+  outline: none;
+  cursor: not-allowed;
+}
+
+.price__separator {
+  width: 9px;
+  height: 2px;
+  background-color: $color-silver;
+}
+
+@media (min-width: $tablet-width) and (max-width: 1439px) {
+  .price__range-scale {
+    width: 219px;
+    margin-bottom: 32px;
+    background-color: $color-mercury;
+  }
+
+  .price__range-bar {
+    width: 190px;
+    background-color: $color-portage;
+  }
+
+  .price__input {
+    width: 92px;
+    height: 37px;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .price__input {
+    width: 134px;
+    height: 40px;
+  }
+
+  .price__range-toggle {
+    &--max {
+      top: -10px;
+      right: 20px;
+    }
+  }
+
+  .price__range-scale {
+    width: 318px;
+  }
+
+  .price__range-bar {
+    width: 274px;
+  }
+}

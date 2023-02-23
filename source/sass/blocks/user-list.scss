@@ -1,0 +1,73 @@
+
+.user-list__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  min-height: 60px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-blue-marguerite;
+  }
+
+  &:hover .user-list__icons,
+  &:active .user-list__icons,
+  &:focus .user-list__icons {
+    fill: $color-blue-marguerite;
+  }
+}
+
+.user-list__icons {
+  fill: $color-mine-shaft;
+}
+
+.user-list__text {
+  display: none;
+}
+
+.user-list--menu {
+  order: -1;
+}
+
+.user-list__item {
+  &:active {
+    background-color: $color-blue-chalk;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .user-list--menu {
+    margin: 0;
+    column-gap: 0;
+  }
+
+  .user-list__link {
+    min-width: 60px;
+    min-height: 80px;
+  }
+}
+
+
+@media (min-width: $dekstop-width) {
+  .user-list__text {
+    display: inline-block;
+  }
+
+  .user-list__link {
+    @include montserrat-regular(12px, 16px);
+    text-transform: uppercase;
+    color: $color-mine-shaft;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    min-width: 112px;
+    padding: 10px 20px 10px 44px;
+  }
+
+  .user-list__icons {
+    fill: $color-mine-shaft;
+    margin-right: 9px;
+  }
+}

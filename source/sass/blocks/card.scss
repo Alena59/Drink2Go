@@ -1,0 +1,95 @@
+.card__item {
+  max-width: 280px;
+  min-height: 380px;
+  border-radius: 4px;
+  padding: 40px 20px 20px;
+  background-color: $color-white;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.card__image {
+  display: block;
+  margin: auto;
+  margin-bottom: 21px;
+}
+
+.card__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.card__title {
+  @include montserrat-bold(18px, 32px);
+  margin: 0 0 4px;
+}
+
+.card__text {
+  @include montserrat-regular(14px, 20px);
+  margin: 0 0 16px 0;
+}
+
+.card__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__button {
+  @include montserrat-regular(14px, 20px);
+  position: relative;
+  padding-left: 40px;
+  padding-right: 20px;
+  min-width: 141px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 20px;
+    width: 20px;
+    height: 16px;
+    background: url("../../img/icons/stack.svg#card-icon");
+  }
+}
+
+.card__price {
+  @include montserrat-semibold(20px, 32px);
+}
+
+@media (min-width: $tablet-width) {
+  .card__item {
+    max-width: 349px;
+    min-height: 440px;
+    padding: 50px 30px 30px;
+  }
+
+  .card__title {
+    @include montserrat-bold(24px, 36px);
+    margin: 0 0 6px;
+  }
+
+  .card__image {
+    margin-bottom: 34px;
+  }
+
+  .card__text {
+    margin: 0 0 21px 0;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .card__item {
+    max-width: 317px;
+    min-height: 460px;
+  }
+
+  .card__text {
+    margin: 0 0 40px 0;
+  }
+}

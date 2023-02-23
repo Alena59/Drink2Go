@@ -1,0 +1,60 @@
+.switch__label {
+  display: inline-block;
+  position: relative;
+  min-height: 24px;
+  padding-left: 52px;
+}
+
+.switch__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 2px;
+  width: 40px;
+  height: 20px;
+  background-color: $color-silver;
+  border-radius: 34px;
+  outline: 2px solid $color-silver;
+  transition: 0.4s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(249, 249, 249);
+    transition: 0.4s;
+  }
+}
+
+.switch__input:not(:disabled):hover + .switch__slider,
+.switch__input:not(:disabled):focus + .switch__slider {
+  background-color: rgba($color-blue-marguerite, 0.25);
+  outline: 2px solid $color-portage;
+}
+
+.switch__input:checked + .switch__slider {
+  outline: 2px solid $color-blue-marguerite;
+  background-color: $color-blue-marguerite;
+}
+
+.switch__input:checked + .switch__slider::before {
+  transform: translateX(20px);
+}
+
+.switch__input:disabled ~ .switch__slider {
+  cursor: not-allowed;
+  background-color: $color-mercury;
+  outline: 2px solid $color-mercury;
+
+  &::before {
+    background-color: $color-alabaster;
+  }
+}
+
+.switch__input:disabled ~ .switch__text {
+  color: $color-silver;
+}

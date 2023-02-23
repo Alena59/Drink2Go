@@ -1,0 +1,47 @@
+.map {
+  width: 100%;
+  background: $color-alabaster url("../../img/map/map-mobile.jpg") no-repeat center;
+  height: 420px;
+
+  @media (min-resolution: 2dppx) {
+    background: $color-alabaster url("../../img/map/map-mobile@2x.jpg") no-repeat center;
+    background-size: contain;
+  }
+}
+
+.map__canvas {
+  height: 420px;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    height: 480px;
+    background: $color-alabaster url("../../img/map/map-tablet.jpg") no-repeat center;
+
+    @media (min-resolution: 2dppx) {
+      background: $color-alabaster url("../../img/map/map-tablet@2x.jpg") no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  .map__canvas {
+    height: 480px;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .map {
+    height: 540px;
+    background: $color-alabaster url("../../img/map/map-desktop.jpg") no-repeat center;
+
+    @media (min-resolution: 2dppx) {
+      background: $color-alabaster url("../../img/map/map-desktop@2x.jpg") no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  .map__canvas {
+    height: 540px;
+  }
+}

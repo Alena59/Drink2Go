@@ -1,0 +1,50 @@
+.control__label {
+  position: relative;
+  display: flex;
+  min-height: 24px;
+  padding-left: 34px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.control__mark {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 17px;
+  height: 17px;
+  background-color: $color-white;
+  outline: 1px solid $color-silver;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.control__text {
+  @include montserrat-regular(16px, 24px);
+}
+
+.control__input:not(:disabled):hover + .control__mark,
+.control__input:not(:disabled):focus + .control__mark {
+  background-color: rgba($color-blue-marguerite, 0.25);
+  border: 1px solid $color-white;
+  outline: 1px solid $color-portage;
+}
+
+.control__input:disabled ~ .control__text {
+  color: $color-silver;
+}
+
+.control__input:disabled ~ .control__mark {
+  cursor: not-allowed;
+  border: 1px solid $color-white;
+  outline: 1px solid $color-mercury;
+  background-color: transparent;
+}
+
+.control__input:checked + .control__mark {
+  background-color: $color-blue-marguerite;
+  border-radius: 50%;
+  outline: 1px solid $color-blue-marguerite;
+  border: 1px solid $color-white;
+  content: "";
+}

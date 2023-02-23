@@ -1,0 +1,10 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  @include montserrat-regular(14px, 20px);
+  min-height: 100%;
+  min-width: 320px;
+  color: $color-mine-shaft;
+}

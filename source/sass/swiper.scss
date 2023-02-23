@@ -1,0 +1,28 @@
+.swiper-pagination-bullet-active .line {
+  background-color: #6600ff;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-inactive-color: rgba(0, 0, 0, 0);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-theme-color: rgba(0, 0, 0, 0);
+  --swiper-pagination-bullet-opacity: 1;
+
+  &:hover .line,
+  &:focus .line {
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+
+  &:active .line {
+    background-color: #6600ff;
+  }
+}
+
+.line {
+  display: block;
+  transform: translateX(-31px);
+  background-color: #ffffff;
+  width: 62px;
+  height: 4px;
+  z-index: 10;
+}

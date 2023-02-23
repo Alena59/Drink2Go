@@ -1,0 +1,28 @@
+.social__link-icon {
+  fill: $color-silver;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background: $color-blue-chalk;
+  }
+
+  &:active {
+    background: rgba($color-blue-marguerite, 25%);
+  }
+}
+
+.social__link:active .social__link-icon,
+.social__link:focus .social__link-icon,
+.social__link:hover .social__link-icon {
+  fill: $color-blue-marguerite;
+}

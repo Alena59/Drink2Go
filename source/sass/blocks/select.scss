@@ -1,0 +1,31 @@
+.select {
+  @include montserrat-semibold(16px, 24px);
+  appearance: none;
+  padding: 3px 30px 3px 10px;
+  display: flex;
+  min-width: 165px;
+  height: 32px;
+  border: none;
+  text-align: right;
+  border-radius: 4px;
+  color: $color-blue-marguerite;
+  cursor: pointer;
+  background-image: url("../../img/icons/stack.svg#select-arrow");
+  background-repeat: no-repeat;
+  background-size: 12px 7px;
+  background-position: center right 10px;
+  background-color: transparent;
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    outline: 2px solid $color-blue-marguerite;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: $color-silver;
+    outline: 2px solid $color-silver;
+    background-image: none;
+  }
+}

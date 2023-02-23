@@ -1,0 +1,93 @@
+.pagination__link {
+  @include montserrat-regular(16px, 24px);
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 4px;
+  background-color: $color-white;
+  color: $color-blue-marguerite;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &--current {
+    @include montserrat-semibold(16px, 24px);
+    color: $color-mine-shaft;
+    background-color: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-portage;
+    color: $color-white;
+  }
+
+  &:active {
+    color: $color-white;
+    background: $color-royal-purple;
+  }
+}
+
+.pagination__arrow {
+  fill: $color-blue-marguerite;
+}
+
+.pagination__arrow--next {
+  transform: rotate(180deg);
+}
+
+.pagination__btn {
+  color: $color-blue-marguerite;
+  background-color: $color-white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:disabled {
+    background: $color-mercury;
+    color: $color-white;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    background-color: $color-portage;
+    color: $color-white;
+  }
+
+  &:not(:disabled):active {
+    background: $color-royal-purple;
+    color: $color-white;
+  }
+
+  &:not(:disabled):hover .pagination__arrow,
+  &:not(:disabled):focus .pagination__arrow,
+  &:disabled .pagination__arrow,
+  &:not(:disabled):active .pagination__arrow {
+    fill: $color-white;
+  }
+}
+
+.pagination__text {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .pagination__btn {
+    @include montserrat-regular(16px, 24px);
+    min-width: 104px;
+    height: 100%;
+    padding: 5px 10px;
+  }
+
+  .pagination__arrow {
+    display: none;
+  }
+
+  .pagination__text {
+    display: inline-block;
+  }
+}
