@@ -67,12 +67,12 @@
   }
 
   .catalog__filter {
-    margin: 0 auto;
     display: grid;
-    width: 728px;
-    grid-template-columns: 222px 230px 220px;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 220px));
     row-gap: 5px;
-    column-gap: 3%;
+    column-gap: 5%;
     grid-template-rows: auto auto;
     margin-bottom: 39px;
   }
@@ -83,8 +83,9 @@
 
   .catalog__list-card {
     display: grid;
-    grid-template-columns: 349px 349px;
-    grid-template-rows: auto auto auto;
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(349px, 1fr));
     row-gap: 30px;
     column-gap: 30px;
     margin-bottom: 72px;
